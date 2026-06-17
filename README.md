@@ -1,6 +1,8 @@
 # CortexPrism Playwright Browser Agent
 
-Give Cortex agents a real Chromium browser via Playwright — navigate, click, type, screenshot, and extract structured data from web pages. The #1 most-demanded MCP capability, now available as a native Cortex plugin.
+Give Cortex agents a real Chromium browser via Playwright — navigate, click, type, screenshot, and
+extract structured data from web pages. The #1 most-demanded MCP capability, now available as a
+native Cortex plugin.
 
 ## Installation
 
@@ -21,12 +23,13 @@ cortex plugin install .
 Configure in the Cortex UI under **Plugins → Playwright → Settings**:
 
 **General**
-| Setting | Type | Default | Description |
-|---------|------|---------|-------------|
-| `headless` | boolean | `true` | Run browser without a visible window |
-| `viewportWidth` | number | `1280` | Default viewport width in pixels |
-| `viewportHeight` | number | `720` | Default viewport height in pixels |
-| `defaultTimeoutMs` | number | `30000` | Default timeout for operations in milliseconds |
+
+| Setting            | Type    | Default | Description                                    |
+| ------------------ | ------- | ------- | ---------------------------------------------- |
+| `headless`         | boolean | `true`  | Run browser without a visible window           |
+| `viewportWidth`    | number  | `1280`  | Default viewport width in pixels               |
+| `viewportHeight`   | number  | `720`   | Default viewport height in pixels              |
+| `defaultTimeoutMs` | number  | `30000` | Default timeout for operations in milliseconds |
 
 ### Playwright Runtime
 
@@ -37,11 +40,13 @@ npx playwright install chromium
 npx playwright install-deps
 ```
 
-Without Playwright installed, `browser_navigate` and `browser_extract` fall back to HTTP fetch with regex-based extraction.
+Without Playwright installed, `browser_navigate` and `browser_extract` fall back to HTTP fetch with
+regex-based extraction.
 
 ## Tools
 
 ### `browser_navigate`
+
 Navigate the browser to a URL. Returns page title and text content.
 
 ```json
@@ -49,6 +54,7 @@ Navigate the browser to a URL. Returns page title and text content.
 ```
 
 ### `browser_click`
+
 Click on an element matching a CSS selector.
 
 ```json
@@ -56,6 +62,7 @@ Click on an element matching a CSS selector.
 ```
 
 ### `browser_type`
+
 Type text into an input element.
 
 ```json
@@ -63,6 +70,7 @@ Type text into an input element.
 ```
 
 ### `browser_screenshot`
+
 Take a screenshot of a web page by URL.
 
 ```json
@@ -70,6 +78,7 @@ Take a screenshot of a web page by URL.
 ```
 
 ### `browser_extract`
+
 Extract structured data from a web page using CSS selectors.
 
 ```json
@@ -77,6 +86,7 @@ Extract structured data from a web page using CSS selectors.
 ```
 
 ### `browser_evaluate`
+
 Execute JavaScript in the browser context. Requires Playwright CLI installed.
 
 ```json
@@ -84,6 +94,7 @@ Execute JavaScript in the browser context. Requires Playwright CLI installed.
 ```
 
 ### `browser_close`
+
 Close the browser instance and release resources.
 
 ```json
@@ -102,11 +113,11 @@ Close the browser instance and release resources.
 
 ## Capabilities
 
-| Capability | Purpose |
-|------------|---------|
-| `network:fetch` | Fetch web pages via HTTPS |
-| `shell:run` | Execute Playwright CLI for full browser interaction |
-| `fs:read` | Read local files if needed for browser automation |
+| Capability      | Purpose                                             |
+| --------------- | --------------------------------------------------- |
+| `network:fetch` | Fetch web pages via HTTPS                           |
+| `shell:run`     | Execute Playwright CLI for full browser interaction |
+| `fs:read`       | Read local files if needed for browser automation   |
 
 ## Development
 

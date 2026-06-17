@@ -1,6 +1,6 @@
 {
   "name": "cortex-plugin-playwright",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Give agents a real Chromium browser via Playwright — navigate, click, type, screenshot, and extract structured data from web pages",
   "kind": "esm",
   "entryPoint": "mod.ts",
