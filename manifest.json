@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-playwright",
-  "version": "1.0.1",
-  "description": "Give agents a real Chromium browser via Playwright — navigate, click, type, screenshot, and extract structured data from web pages",
+  "version": "1.0.2",
+  "description": "Give agents a real Chromium browser via Playwright \u2014 navigate, click, type, screenshot, and extract structured data from web pages",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -31,7 +31,11 @@
           "type": "string",
           "description": "When to consider navigation complete",
           "required": false,
-          "enum": ["load", "domcontentloaded", "networkidle"]
+          "enum": [
+            "load",
+            "domcontentloaded",
+            "networkidle"
+          ]
         }
       ]
     },
@@ -131,6 +135,7 @@
       "params": []
     }
   ],
+  "dependencies": {},
   "peerDependencies": {
     "cortex": ">=1.0.0"
   },
@@ -143,29 +148,29 @@
             "key": "headless",
             "label": "Headless Mode",
             "type": "boolean",
-            "defaultValue": true,
-            "description": "Run browser without a visible window"
+            "description": "Run browser without a visible window",
+            "default": true
           },
           {
             "key": "viewportWidth",
             "label": "Viewport Width",
             "type": "number",
-            "defaultValue": 1280,
-            "description": "Default browser viewport width in pixels"
+            "description": "Default browser viewport width in pixels",
+            "default": 1280
           },
           {
             "key": "viewportHeight",
             "label": "Viewport Height",
             "type": "number",
-            "defaultValue": 720,
-            "description": "Default browser viewport height in pixels"
+            "description": "Default browser viewport height in pixels",
+            "default": 720
           },
           {
             "key": "defaultTimeoutMs",
             "label": "Default Timeout (ms)",
             "type": "number",
-            "defaultValue": 30000,
-            "description": "Default timeout for operations in milliseconds"
+            "description": "Default timeout for operations in milliseconds",
+            "default": 30000
           }
         ]
       }
@@ -173,7 +178,7 @@
   },
   "aiDisclosure": {
     "tools": [
-      "Claude Code (Anthropic) — initial scaffold and implementation"
+      "Claude Code (Anthropic) \u2014 initial scaffold and implementation"
     ],
     "humanReview": true
   }
