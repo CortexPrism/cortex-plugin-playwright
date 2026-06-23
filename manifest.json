@@ -1,6 +1,6 @@
 {
   "name": "cortex-plugin-playwright",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Give agents a real Chromium browser via Playwright \u2014 navigate, click, type, screenshot, and extract structured data from web pages",
   "kind": "esm",
   "entryPoint": "mod.ts",
@@ -137,7 +137,7 @@
   ],
   "dependencies": {},
   "peerDependencies": {
-    "cortex": ">=1.0.0"
+    "cortex": ">=0.51.0"
   },
   "ui": {
     "settings": [
@@ -149,28 +149,28 @@
             "label": "Headless Mode",
             "type": "boolean",
             "description": "Run browser without a visible window",
-            "default": true
+            "defaultValue": true
           },
           {
             "key": "viewportWidth",
             "label": "Viewport Width",
             "type": "number",
             "description": "Default browser viewport width in pixels",
-            "default": 1280
+            "defaultValue": 1280
           },
           {
             "key": "viewportHeight",
             "label": "Viewport Height",
             "type": "number",
             "description": "Default browser viewport height in pixels",
-            "default": 720
+            "defaultValue": 720
           },
           {
             "key": "defaultTimeoutMs",
             "label": "Default Timeout (ms)",
             "type": "number",
             "description": "Default timeout for operations in milliseconds",
-            "default": 30000
+            "defaultValue": 30000
           }
         ]
       }
